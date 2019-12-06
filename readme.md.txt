@@ -1,0 +1,1 @@
+This is a dice game in web devlopment .It is just a basic of javascript for understanding. 
