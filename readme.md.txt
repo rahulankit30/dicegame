@@ -1,1 +1,1 @@
-This is a dice game in web devlopment .It is just a basic of javascript for understanding. 
+This is a dice game in web devlopment .It is just a basic of javascript for understanding.It also help to understand basics of html and css.
