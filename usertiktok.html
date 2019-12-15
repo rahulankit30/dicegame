@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    MINUTES:
+    <input id="t1" type="number">
+    <br> SECONDS:
+    <input id="t2" type="number">
+    <br>
+    <img src="https://www.dhresource.com/200x200s/f2-albu-g5-M01-DC-57-rBVaJFoqtHqASz5FAAGMcw4dJ2A582.jpg/8cm-mini-mechanical-countdown-kitchen-tool.jpg" width="100px" height="100px" />
+    <button onclick="myFunction()">START</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
+
+    <script>
+        var t, p,y1;
+
+        function myFunction() {
+            var x = document.getElementById("t1").value;
+            var y = document.getElementById("t2").value;
+            t = (parseInt(x) * 60) + parseInt(y);
+            y1 = setInterval(timer, 1000);
+        }
+
+        function timer() {
+            if (t < 59) {
+                document.getElementById("demo1").innerHTML = t;
+            } else {
+                document.getElementById("demo").innerHTML = getMinute();
+                document.getElementById("demo1").innerHTML = getsecond();
+            }
+            if (t < 10) {
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("demo1").style.color = "red";
+                document.getElementById("demo3").innerHTML = "HURRY UP!!!!!!!";
+
+            }
+            if (t < 0) {
+                alert("<b>TIMES UPs!!!!!!!!!</b>");
+                document.getElementById("demo").innerHTML = 00;
+                document.getElementById("demo1").innerHTML = 00;
+				document.getElementById("demo3").innerHTML = "TIMES UP!!!!!!!";
+                clearInterval(y1);
+
+            } else {
+                t--;
+            }
+        }
+
+        function getMinute() {
+            p = Math.floor(parseInt(t) / 60);
+            return p;
+        }
+
+        function getsecond() {
+            return t - Math.round(parseInt(p) * 60);
+        }
+    </script>
+
+</body>
+
+</html>
